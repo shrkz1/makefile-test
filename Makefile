@@ -47,7 +47,8 @@ bump-version: guard-VERSION
 # Tag a release
 tag-release: guard-VERSION bump-version
 	@echo "Tagging $(VERSION)"
-	git tag -s $(VERSION) -m "$(VERSION)"
+	#git tag -s $(VERSION) -m "$(VERSION)"
+	git tag $(VERSION) -m "$(VERSION)"
 	git push $(REMOTE)
 	git push $(REMOTE) --tags
 
